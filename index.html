@@ -1,24 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Completa tu nombre -->
-    <title>Elías Sánchez Martín</title>
-
-    <style src="static/style.css"></style>
+    <title>Elias Sánchez Martín</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
 </head>
-
 <body>
-
-    <!-- Completar html aqui -->
-    
-    <footer>Elías Sánchez Martín 2022</footer>
+    <div class="middle_center">
+        <div id="main_list" class="sep">
+            <header>Aplicación de dietas</header>
+            <main>
+                <table class="default">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Sexo</th>
+                            <th>Edad</th>
+                            <th>Altura</th>
+                            <th>Peso</th>
+                            <th>Actividad</th>
+                            <th>IM Basal</th>
+                            <th>Calorías necesarias</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="nombre">Francisco Romero</td>
+                            <td class="man">hombre</td>
+                            <td>31</td>
+                            <td>198</td>
+                            <td>89</td>
+                            <td class="activity">moderada</td>
+                            <td class="kcal">1427 kCal</td>
+                            <td class="kcal">1712 kCal</td>
+                        </tr>
+                        <tr>
+                            <td class="nombre">Jose Antonio Lara</td>
+                            <td class="man">hombre</td>
+                            <td>46</td>
+                            <td>187</td>
+                            <td>85</td>
+                            <td class="activity">moderada</td>
+                            <td class="kcal">1333 kCal</td>
+                            <td class="kcal">1435 kCal</td>
+                        </tr>
+                        <tr>
+                            <td class="nombre">Jenifer López</td>
+                            <td class="woman">mujer</td>
+                            <td>45</td>
+                            <td>167</td>
+                            <td>56</td>
+                            <td class="activity">alta</td>
+                            <td class="kcal">1256 kCal</td>
+                            <td class="kcal">1943 kCal</td>
+                        </tr>
+                        <tr>
+                            <td class="nombre">Adriana Cuenca</td>
+                            <td class="woman">mujer</td>
+                            <td>35</td>
+                            <td>178</td>
+                            <td>70</td>
+                            <td class="activity">alta</td>
+                            <td class="kcal">1500 kCal</td>
+                            <td class="kcal">1700 kCal</td>
+                        </tr>
+                        <tr>
+                            <td class="nombre">Araceli Otaclu</td>
+                            <td class="woman">mujer</td>
+                            <td>72</td>
+                            <td>132</td>
+                            <td>50</td>
+                            <td class="activity">suave</td>
+                            <td class="kcal">1128 kCal</td>
+                            <td class="kcal">1323 kCal</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="green new_client">Añadir cliente</button>
+            </main>
+            <footer>Elías Sánchez Martín 2022</footer>
+        </div>
+    </div>
+    <div id="new_client" class="middle_center display_none">
+        <div class="sep">
+            <header>Nuevo cliente</header>
+            <main>
+                <form action="" id="form_new_client" method="get" class="flex">
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre">
+                    </div>
+                    <div>
+                        <label>Sexo:</label>
+                        <div class="group">
+                            <input type="radio" name="sexo" id="sexo_hombre" value="hombre">
+                            <label for="sexo_hombre">Hombre</label>
+                            <input type="radio" name="sexo" id="sexo_mujer" value="mujer" checked>
+                            <label for="sexo_mujer">Mujer</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="edad">Edad:</label>
+                        <input type="number" id="edad" name="edad" value="20" min="15" max="99">
+                    </div>
+                    <div>
+                        <label for="altura">Altura (cm):</label>
+                        <input type="number" id="altura" name="altura" value="165" min="130" max="240">
+                    </div>
+                    <div>
+                        <label for="peso">Peso (kg):</label>
+                        <input type="number" id="peso" name="peso" value="65" min="45" max="145">
+                    </div>
+                    <div>
+                        <label for="actividad">Nombre:</label>
+                        <select id="actividad" name="actividad">
+                            <option value="Sedentaria">Suave o sedentaria</option>
+                            <option value="Moderada">Moderada</option>
+                            <option value="Alta">Alta</option>
+                        </select>
+                    </div>
+                </form>
+            </main>
+            <footer>
+                <button type="submit" form="form_new_client" class="green bordered">Añadir Nuevo</button>
+                <button class="close">Volver atrás</button>
+            </footer>
+        </div>
+    </div>
     <script src="static/app.js"></script>
-
 </body>
-
 </html>
